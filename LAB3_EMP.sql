@@ -49,13 +49,13 @@ select * from employee where department_id in(10, 20, 30, 50);
 #15 Display the details of all employees whose salary is not equal to 5000.
 select * from employee where salary!=5000;
 #16 Display the details of all the CLERKS working in the organization.
-select * from employee where Job_id like 'CLEARK';
+select * from employee where Job_id like '%CLEARK%';
 #17 Update the job_id’s of the employees who earn more than 5000 to Grade_A. Display the table EMPLOYEE after updating.
 update employee set job_id='Grade_A' where salary>5000;
 select * from employee;
 #18 Display the details of all those employees who are either CLERK or PROGRAMMER or ASSISTANT.
 select * from employee where job_id in('SH_CLERK','AD_ASST','IT_PROG');
 #19  Display those employees from the EMPLOYEE table whose designation is CLERK and salary is less than 3000.
-select * from employee where Job_id like 'CLERK' and salary<3000;
+select * from employee where Job_id like '%CLERK%' and salary<3000;
 #20 Display those employees Last_Name, Mgr_id from the EMPLOYEE table whose salary is above 3000 and work under Manager 101.
 select last_name, mgr_id from employee where salary>3000 and mgr_id=101;
